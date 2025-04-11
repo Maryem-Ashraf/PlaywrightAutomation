@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test')
 
-test('handle inoutbox', async ({page})=>{
+test('handle radiobutton', async ({page})=>{
 
     await page.goto('https://practice.expandtesting.com/inputs')
 
