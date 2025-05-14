@@ -1,0 +1,15 @@
+import { test, expect } from '@playwright/test';
+
+test('videorecording', async ({ page }) => {
+  await page.goto('https://www.demoblaze.com/');
+  await page.getByRole('link', { name: 'Log in' }).click();
+  await page.locator('#loginusername').click();
+  await page.locator('#loginusername').fill('Maryem');
+  await page.locator('#loginpassword').click();
+  await page.locator('#loginpassword').fill('2480');
+  await page.getByRole('button', { name: 'Log in' }).click();
+  await page.getByRole('link', { name: 'Log out' }).click();
+});
+
+//in config file, Trace: "on" -> it will trace all the steps that will help in debugging
+//to open the trace file, add command -> npx playwright show-trace (write-relative path of zip file from test result folder)
